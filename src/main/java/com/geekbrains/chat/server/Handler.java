@@ -30,6 +30,7 @@ public class Handler implements Runnable {
     public void run() {
         try {
             while (running) {
+                // вкрутить логику с получением файла от клиента
                 int read = is.read(buf);
                 String message = new String(buf, 0, read)
                         .trim();

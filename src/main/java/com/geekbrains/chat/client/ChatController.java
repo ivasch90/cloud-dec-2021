@@ -14,12 +14,15 @@ import javafx.scene.control.TextField;
 public class ChatController implements Initializable {
 
     public TextField input;
-    public ListView<String> listView;
+    public ListView<String> listView; // список файлов в директории клиента
     private IoNet net;
 
     public void sendMsg(ActionEvent actionEvent) throws IOException {
         net.sendMsg(input.getText());
         input.clear();
+        // String item = listView.getSelectionModel().getSelectedItem();
+        // отправить выбранный в listView файл на сервер
+        // придумать как это сделать
     }
 
     private void addMessage(String msg) {
