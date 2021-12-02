@@ -151,8 +151,9 @@ public class NioServer {
         SocketChannel socketChannel = serverChannel.accept();
         socketChannel.configureBlocking(false);
         socketChannel.register(selector, SelectionKey.OP_READ, "Hello world!");
-        socketChannel.write(ByteBuffer.wrap(("Welcome in Mike terminal\n\r" +
-                "Mike -> ").getBytes(StandardCharsets.UTF_8)));
+        socketChannel.write(ByteBuffer.wrap((
+                "Welcome in Mike terminal\n\rMike -> "
+        ).getBytes(StandardCharsets.UTF_8)));
     }
 
 }

@@ -5,9 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6347053d-8d60-44a8-8db0-781326d6ac31" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/nio/TerminalCommandType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/AbstractMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/StringMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/ClientMessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/ConsoleClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/NettyNet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/chat/client/OnMessageReceived.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/netty/MessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/netty/NettyServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/netty/StringHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/netty/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/netty/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
       <change afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/properties.d/10_memcahed.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/nio/NioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/nio/NioServer.java" afterDir="false" />
       <change beforePath="$USER_HOME$/arcadia/market/adv/incut/src/main/properties.d/local/10_local.properties" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/properties.d/local/10_local.properties" afterDir="false" />
       <change beforePath="$USER_HOME$/arcadia/market/adv/incut/src/main/properties.d/production/10_production.properties" beforeDir="false" afterPath="$USER_HOME$/arcadia/market/adv/incut/src/main/properties.d/production/10_production.properties" afterDir="false" />
@@ -25,9 +38,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -46,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,7 +69,11 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.geekbrains.chat.client" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/files" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/geekbrains/chat/client" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/geekbrains/calculator" />
@@ -65,7 +82,7 @@
       <recent name="$PROJECT_DIR$/client" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NioServer">
+  <component name="RunManager" selected="Application.ConsoleClient">
     <configuration name="Buffers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.geekbrains.nio.Buffers" />
       <module name="cloud-dec-2021" />
@@ -79,8 +96,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.chat.client.ChatApp" />
+    <configuration name="ConsoleClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.chat.client.ConsoleClient" />
       <module name="cloud-dec-2021" />
       <extension name="coverage">
         <pattern>
@@ -92,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Examples" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.nio.Examples" />
+    <configuration name="NettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.netty.NettyServer" />
       <module name="cloud-dec-2021" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.nio.*" />
+          <option name="PATTERN" value="com.geekbrains.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerIo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.geekbrains.chat.server.ServerIo" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.geekbrains.netty.Test" />
       <module name="cloud-dec-2021" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.geekbrains.chat.server.*" />
+          <option name="PATTERN" value="com.geekbrains.netty.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ConsoleClient" />
+        <item itemvalue="Application.NettyServer" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.NioServer" />
         <item itemvalue="Application.Buffers" />
-        <item itemvalue="Application.Examples" />
-        <item itemvalue="Application.ChatApp" />
-        <item itemvalue="Application.ServerIo" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +183,7 @@
       <workItem from="1637859938603" duration="23000" />
       <workItem from="1637860007600" duration="5864000" />
       <workItem from="1638206049035" duration="6879000" />
-      <workItem from="1638465007092" duration="2020000" />
+      <workItem from="1638465007092" duration="5797000" />
     </task>
     <task id="LOCAL-00001" summary="Комментарии к домашке">
       <created>1637866134562</created>
@@ -182,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638213004826</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Урок 2. Разработка сервера на Nio">
+      <created>1638467110469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638467110469</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
